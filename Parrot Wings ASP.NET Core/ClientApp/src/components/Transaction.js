@@ -227,7 +227,7 @@ export default class Transaction extends Component {
     }
 
     //сброс ошибки валидации при вводе новых данных
-    ClearValidationFail() {
+    ClearValidationFail(event) {
         let recipientsListbox = document.querySelector(".recipients");
         recipientsListbox.setCustomValidity("");
         let amountTextbox = document.querySelector(".amount");
@@ -256,7 +256,7 @@ export default class Transaction extends Component {
                         <datalist id="recipients">
                             {optionRecipientsList}
                         </datalist>
-                        <input type="number" min="1" className="amount" name="amount" placeholder="PW transaction amount" autoComplete="off" onChange={this.ClearValidationFail} required pattern="^\d+$" title="Numeric" />
+                        <input type="number" min="1" className="amount" name="amount" placeholder="PW transaction amount" autoComplete="off" onChange={this.ClearValidationFail} title="Numeric" />
                         <input type="submit" value="Submit" onClick={this.CustomValidation} />
                         <input type="button" value="Cancel" onClick={this.CancelTransaction} />
                     </form>
@@ -272,15 +272,17 @@ export default class Transaction extends Component {
             //десериализуем в объект
             let transactionData = JSON.parse(this.props.transactionData);
             //подставляем данные в поля
+            let recipient = transactionData.userName + " - id#" + transactionData.userId;
+            let amount = transactionData.amount;
             return (
                 <div className="transactionForm container">
                     <h3>Transaction</h3>
                     <form id="transactionForm" onSubmit={this.SubmitTransaction}>
-                        <input list="recipients" className="recipients" required value={transactionData.userName + " - id#" + transactionData.userId} placeholder="Choose recipient" autoComplete="off" onChange={this.ClearValidationFail} />
+                        <input list="recipients" className="recipients" required defaultValue={recipient} placeholder="Choose recipient" autoComplete="off" onChange={this.ClearValidationFail} />
                         <datalist id="recipients">
                             {optionRecipientsList}
                         </datalist>
-                        <input type="number" min="1" className="amount" name="amount" placeholder="PW transaction amount" value={transactionData.amount} autoComplete="off" onChange={this.ClearValidationFail} required pattern="^\d+$" title="Numeric" />
+                        <input type="number" min="1" className="amount" name="amount" placeholder="PW transaction amount" defaultValue={transactionData.amount} autoComplete="off" onChange={this.ClearValidationFail} required title="Numeric" />
                         <input type="submit" value="Submit" onClick={this.CustomValidation} />
                         <input type="button" value="Cancel" onClick={this.CancelTransaction} />
                     </form>

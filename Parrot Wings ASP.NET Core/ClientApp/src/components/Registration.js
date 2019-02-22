@@ -151,6 +151,8 @@ class Registration extends Component {
     OnChange() {
         let repeatPasswordTextbox = document.querySelector(".repeatPassword");
         repeatPasswordTextbox.setCustomValidity("");
+        let emailTextbox = document.querySelector(".email");
+        emailTextbox.setCustomValidity("");
     }
 
     render() {
@@ -159,7 +161,7 @@ class Registration extends Component {
                 <h3>Registration</h3>
                 <form id="registrationForm" onSubmit={this.onSubmit}>
                     <input type="text" name="userName" placeholder="User name" autoComplete="off" required />
-                    <input type="text" className="email" name="email" placeholder="User e-mail" autoComplete="off" required pattern="^.+@.+\..+$" title="E-mail format: any@any.any"/>
+                    <input type="text" className="email" name="email" placeholder="User e-mail" autoComplete="off" onChange={this.OnChange} required pattern="^.+@.+\..+$" title="E-mail format: any@any.any"/>
                     <input type="password" className="password" name="password" placeholder="Password" required />
                     <input type="password" className="repeatPassword" placeholder="Repeat password" onChange={this.OnChange} required />
                     <input type="submit" value="Submit" onClick={this.CustomValidation} />

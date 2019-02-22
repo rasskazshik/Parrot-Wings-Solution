@@ -31,7 +31,7 @@ class User extends Component {
 
     //статус - активная транзакция, ререндер с компонентом транзакции
     NewTransaction() {
-        this.setState({ transaction : true });
+        this.setState({ transaction: true, transactionData: null});
     }
 
     //статус - неактивная транзакция (рендерятся компоненты истории)
