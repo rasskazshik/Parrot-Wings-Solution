@@ -1,0 +1,7 @@
+﻿.totalContentContainer{
+    display:flex;
+    min-height:100vh;
+    background-color:rgba(63, 208, 255, .3);
+    padding-left:0;
+    padding-right:0;
+}

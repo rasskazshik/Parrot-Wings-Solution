@@ -1,0 +1,1 @@
+﻿export const API_DOMAIN = "https://localhost:44347/";

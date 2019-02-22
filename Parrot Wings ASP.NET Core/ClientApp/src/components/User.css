@@ -1,0 +1,64 @@
+﻿.widthFull{
+    width:100%;
+}
+
+.header{
+    background-color:rgba(93, 207, 222,.9);
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:10px;
+    padding-bottom:10px;
+}
+
+.userInfo{
+    text-align:center;
+    padding:5px;
+}
+
+    .userInfo div {
+        font-size: large;
+    }
+.buttons {
+    width: 20%;
+    min-width: 150px;
+    padding-top: 20px;
+}
+.buttons input{
+    width: 100%;
+}
+
+.parrot {
+    height: 120px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flip {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+@media (max-width: 601px) {
+    .header {        
+        flex-direction:column;
+    }
+    .userInfo {
+        width: 70%;
+    }
+
+    .buttons {
+        width: 70%;
+    }
+    .parrot {
+        display: none;
+    }
+}

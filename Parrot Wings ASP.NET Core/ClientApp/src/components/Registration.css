@@ -1,0 +1,34 @@
+﻿.registrationForm {
+    width: 300px;
+    align-self: center;
+    max-height: fit-content;
+    padding: 10px;
+    background-color: rgba(93, 207, 222,.9);
+    border-radius: 5px;
+}
+
+    .registrationForm h3 {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .registrationForm input {
+        width: 100%;
+        text-align: center;
+    }
+
+    .messageLayout {
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .messageLayout img {
+        margin: 10px;
+        width: 30px;
+    }
+
+    .messageLayout span {
+        margin: 10px;
+    }

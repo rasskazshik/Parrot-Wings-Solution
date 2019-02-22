@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parrot Wings ASP.NET Core", "Parrot Wings ASP.NET Core\Parrot Wings ASP.NET Core.csproj", "{BFBE4FF6-9569-4B8F-BD38-887C1C9492D3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8865B7CD-EC8F-4BEA-A371-D5EBBD95B6BD} = {8865B7CD-EC8F-4BEA-A371-D5EBBD95B6BD}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parrot Wings ASP.NET Framework API", "Parrot Wings ASP.NET Framework API\Parrot Wings ASP.NET Framework API.csproj", "{8865B7CD-EC8F-4BEA-A371-D5EBBD95B6BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFBE4FF6-9569-4B8F-BD38-887C1C9492D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBE4FF6-9569-4B8F-BD38-887C1C9492D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBE4FF6-9569-4B8F-BD38-887C1C9492D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBE4FF6-9569-4B8F-BD38-887C1C9492D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8865B7CD-EC8F-4BEA-A371-D5EBBD95B6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8865B7CD-EC8F-4BEA-A371-D5EBBD95B6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8865B7CD-EC8F-4BEA-A371-D5EBBD95B6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8865B7CD-EC8F-4BEA-A371-D5EBBD95B6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {240A1F0D-BD8A-4DB0-AC91-8E6C75657CDD}
+	EndGlobalSection
+EndGlobal
