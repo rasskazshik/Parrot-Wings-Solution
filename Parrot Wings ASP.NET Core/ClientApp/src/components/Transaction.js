@@ -256,7 +256,7 @@ export default class Transaction extends Component {
                         <datalist id="recipients">
                             {optionRecipientsList}
                         </datalist>
-                        <input type="number" min="1" className="amount" name="amount" placeholder="PW transaction amount" autoComplete="off" onChange={this.ClearValidationFail} title="Numeric" />
+                        <input type="number" min="1" max="2147483647" className="amount" name="amount" placeholder="PW transaction amount" autoComplete="off" onChange={this.ClearValidationFail} title="Numeric" />
                         <input type="submit" value="Submit" onClick={this.CustomValidation} />
                         <input type="button" value="Cancel" onClick={this.CancelTransaction} />
                     </form>
@@ -282,7 +282,7 @@ export default class Transaction extends Component {
                         <datalist id="recipients">
                             {optionRecipientsList}
                         </datalist>
-                        <input type="number" min="1" className="amount" name="amount" placeholder="PW transaction amount" defaultValue={transactionData.amount} autoComplete="off" onChange={this.ClearValidationFail} required title="Numeric" />
+                        <input type="number" min="1" max="2147483647" className="amount" name="amount" placeholder="PW transaction amount" defaultValue={transactionData.amount} autoComplete="off" onChange={this.ClearValidationFail} required title="Numeric" />
                         <input type="submit" value="Submit" onClick={this.CustomValidation} />
                         <input type="button" value="Cancel" onClick={this.CancelTransaction} />
                     </form>
